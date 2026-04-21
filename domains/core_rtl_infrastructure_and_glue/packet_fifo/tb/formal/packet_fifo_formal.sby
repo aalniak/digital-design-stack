@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal stream_fifo.sv packet_fifo.sv packet_fifo_formal.sv
+prep -top packet_fifo_formal
+
+[files]
+../../../stream_fifo/rtl/stream_fifo.sv
+../../rtl/packet_fifo.sv
+packet_fifo_formal.sv
