@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal register_slice.sv register_slice_formal.sv
+prep -top register_slice_formal
+
+[files]
+../../rtl/register_slice.sv
+register_slice_formal.sv
