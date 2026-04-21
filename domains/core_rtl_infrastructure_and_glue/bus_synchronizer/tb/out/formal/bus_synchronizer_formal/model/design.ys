@@ -1,0 +1,8 @@
+# running in C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\bus_synchronizer\tb\out\formal\bus_synchronizer_formal/src/
+read -formal bus_synchronizer.sv bus_synchronizer_formal.sv
+prep -top bus_synchronizer_formal
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

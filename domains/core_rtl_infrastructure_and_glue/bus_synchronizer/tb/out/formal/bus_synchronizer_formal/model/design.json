@@ -1,0 +1,1120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/main/misc/jny.schema.json",
+  "generator": "Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "$paramod$fe3d7b146cbc6a6bb98f4ef4e9d5205bc3a1db7a\\bus_synchronizer",
+        "cell_sorts": [
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$43",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer.sv:78.17-78.83|bus_synchronizer.sv:78.13-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$45",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:84.22-84.44|bus_synchronizer.sv:84.18-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$48",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer.sv:78.17-78.83|bus_synchronizer.sv:78.13-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$51",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer.sv:78.17-78.83|bus_synchronizer.sv:78.13-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$53",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:84.22-84.44|bus_synchronizer.sv:84.18-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$56",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer.sv:78.17-78.83|bus_synchronizer.sv:78.13-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$59",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer.sv:78.17-78.83|bus_synchronizer.sv:78.13-87.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$61",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:52.17-52.39|bus_synchronizer.sv:52.13-55.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$63",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:52.17-52.39|bus_synchronizer.sv:52.13-55.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$adff",
+            "ports": [
+                {
+                  "name": "ARST",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$104",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$109",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$114",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$119",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$129",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$134",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$139",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:38.5-57.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "00000000",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procdff$144",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:38.5-57.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$154",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:38.5-57.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$159",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:38.5-57.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$99",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:59.5-89.8"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "00000000",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$not$bus_synchronizer.sv:54$34",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:54.37-54.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ne",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$bus_synchronizer.sv:78$38",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:78.32-78.82"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_not$bus_synchronizer.sv:78$37",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:78.17-78.27"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$bus_synchronizer.sv:52$33",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:52.17-52.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$bus_synchronizer.sv:78$39",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:78.17-78.83"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$bus_synchronizer.sv:84$40",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:84.22-84.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$bus_synchronizer.sv:36$30",
+                  "attributes": {
+                    "src": "bus_synchronizer.sv:36.25-36.70"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "dynports": "00000000000000000000000000000001",
+            "hdlname": "bus_synchronizer",
+            "src": "bus_synchronizer.sv:1.1-90.10"
+        }
+      },
+      {
+        "name": "bus_synchronizer_formal",
+        "cell_sorts": [
+          {
+            "type": "$paramod$fe3d7b146cbc6a6bb98f4ef4e9d5205bc3a1db7a\\bus_synchronizer",
+            "ports": [
+                {
+                  "name": "dst_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "dst_data",
+                  "direction": "",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "dst_pulse",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "dst_ready",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "dst_rst_n",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "dst_valid",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "src_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "src_data",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "src_ready",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "src_rst_n",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "src_valid",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "dut",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:26.7-38.6"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$65",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:61.18-61.26|bus_synchronizer_formal.sv:61.14-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$68",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:55.13-55.23|bus_synchronizer_formal.sv:55.9-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$70",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:62.17-62.26|bus_synchronizer_formal.sv:62.13-64.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$72",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:61.18-61.26|bus_synchronizer_formal.sv:61.14-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$75",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:55.13-55.23|bus_synchronizer_formal.sv:55.9-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$84",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:55.13-55.23|bus_synchronizer_formal.sv:55.9-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$88",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:50.13-50.23|bus_synchronizer_formal.sv:50.9-53.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$90",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:61.18-61.26|bus_synchronizer_formal.sv:61.14-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$93",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:55.13-55.23|bus_synchronizer_formal.sv:55.9-67.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ff",
+            "ports": [
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [5, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$160",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:46.5-68.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procdff$161",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:46.5-68.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$162",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:46.5-68.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$check",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ARGS",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "TRG",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "_witness_.check_assert_bus_synchronizer_formal_sv_52_17",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_bus_synchronizer_formal_sv_52_17",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:52.13-52.30"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111110",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_bus_synchronizer_formal_sv_56_19",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_bus_synchronizer_formal_sv_56_19",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:56.13-56.31"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111101",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_bus_synchronizer_formal_sv_57_21",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_bus_synchronizer_formal_sv_57_21",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:57.13-57.31"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111100",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_bus_synchronizer_formal_sv_58_23",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_bus_synchronizer_formal_sv_58_23",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:58.13-58.51"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111011",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_bus_synchronizer_formal_sv_63_25",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_bus_synchronizer_formal_sv_63_25",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:63.17-63.34"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111010",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_bus_synchronizer_formal_sv_65_26",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_bus_synchronizer_formal_sv_65_26",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:65.13-65.59"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111001",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_bus_synchronizer_formal_sv_51_15",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_bus_synchronizer_formal_sv_51_15",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "bus_synchronizer_formal.sv:51.13-51.31"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$bus_synchronizer_formal.sv:20$11",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:20.22-20.46"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$bus_synchronizer_formal.sv:65$27",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:65.22-65.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ge",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [3, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ge$bus_synchronizer_formal.sv:10$6",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:10.23-10.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ge$bus_synchronizer_formal.sv:9$5",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:9.23-9.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$bus_synchronizer_formal.sv:58$24",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:58.20-58.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$bus_synchronizer_formal.sv:20$10",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:20.22-20.35"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$bus_synchronizer_formal.sv:51$16",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:51.20-51.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$bus_synchronizer_formal.sv:56$20",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:56.20-56.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$bus_synchronizer_formal.sv:57$22",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:57.20-57.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$bus_synchronizer_formal.sv:65$28",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:65.20-65.58"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$anyseq",
+            "ports": [
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [8, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$anyseq$7",
+                  "attributes": {
+                    "reg": "src_data",
+                    "src": "bus_synchronizer_formal.sv:12.39-12.47"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$anyseq$8",
+                  "attributes": {
+                    "reg": "src_valid",
+                    "src": "bus_synchronizer_formal.sv:13.22-13.31"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$anyseq$9",
+                  "attributes": {
+                    "reg": "dst_ready",
+                    "src": "bus_synchronizer_formal.sv:18.22-18.31"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [5, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$bus_synchronizer_formal.sv:48$13",
+                  "attributes": {
+                    "src": "bus_synchronizer_formal.sv:48.25-48.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000101"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "bus_synchronizer_formal",
+            "dynports": "00000000000000000000000000000001",
+            "top": "00000000000000000000000000000001",
+            "src": "bus_synchronizer_formal.sv:1.1-69.10"
+        }
+      }
+  ]
+}

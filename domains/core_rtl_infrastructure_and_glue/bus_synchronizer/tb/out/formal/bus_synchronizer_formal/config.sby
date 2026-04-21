@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal bus_synchronizer.sv bus_synchronizer_formal.sv
+prep -top bus_synchronizer_formal
+
+[files]
+../../rtl/bus_synchronizer.sv
+bus_synchronizer_formal.sv
