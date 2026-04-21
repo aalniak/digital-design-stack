@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal priority_arbiter.sv priority_arbiter_formal.sv
+prep -top priority_arbiter_formal
+
+[files]
+../../rtl/priority_arbiter.sv
+priority_arbiter_formal.sv
