@@ -1,0 +1,8 @@
+# running in C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\pulse_synchronizer\tb\out\formal\pulse_synchronizer_formal/src/
+read -formal pulse_synchronizer.sv pulse_synchronizer_formal.sv
+prep -top pulse_synchronizer_formal
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

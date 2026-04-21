@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal pulse_synchronizer.sv pulse_synchronizer_formal.sv
+prep -top pulse_synchronizer_formal
+
+[files]
+../../rtl/pulse_synchronizer.sv
+pulse_synchronizer_formal.sv

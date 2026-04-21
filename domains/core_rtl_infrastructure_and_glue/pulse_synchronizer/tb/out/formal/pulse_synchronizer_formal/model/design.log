@@ -1,0 +1,394 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: pulse_synchronizer.sv
+Parsing formal SystemVerilog input from `pulse_synchronizer.sv' to AST representation.
+Storing AST representation for module `$abstract\pulse_synchronizer'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: pulse_synchronizer_formal.sv
+Parsing formal SystemVerilog input from `pulse_synchronizer_formal.sv' to AST representation.
+Storing AST representation for module `$abstract\pulse_synchronizer_formal'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\pulse_synchronizer_formal'.
+Generating RTLIL representation for module `\pulse_synchronizer_formal'.
+
+3.2.1. Analyzing design hierarchy..
+Top module:  \pulse_synchronizer_formal
+Parameter \SYNC_STAGES = 2
+
+3.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\pulse_synchronizer'.
+Parameter \SYNC_STAGES = 2
+Generating RTLIL representation for module `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Warning: Replacing memory \req_sync_q with list of registers. See pulse_synchronizer.sv:53
+Warning: Replacing memory \ack_sync_q with list of registers. See pulse_synchronizer.sv:32
+
+3.2.3. Analyzing design hierarchy..
+Top module:  \pulse_synchronizer_formal
+Used module:     $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+
+3.2.4. Analyzing design hierarchy..
+Top module:  \pulse_synchronizer_formal
+Used module:     $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+Removing unused module `$abstract\pulse_synchronizer_formal'.
+Removing unused module `$abstract\pulse_synchronizer'.
+Removed 2 unused modules.
+Module pulse_synchronizer_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3.3. Executing PROC pass (convert processes to netlists).
+
+3.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:20$36'.
+Removing empty process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:20$36'.
+Cleaned up 1 empty switch.
+
+3.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$pulse_synchronizer.sv:47$33 in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Marked 1 switch rules as full_case in process $proc$pulse_synchronizer.sv:28$28 in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Marked 1 switch rules as full_case in process $proc$pulse_synchronizer_formal.sv:38$12 in module pulse_synchronizer_formal.
+Removed a total of 0 dead cases.
+
+3.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 5 redundant assignments.
+Promoted 9 assignments to connections.
+
+3.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:31$26'.
+  Set init value: \formal_ticks = 5'00000
+  Set init value: \prev_src_clk = 1'0
+  Set init value: \prev_dst_clk = 1'0
+  Set init value: \prev_dst_pulse_sampled = 1'0
+
+3.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \dst_rst_n in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+Found async reset \src_rst_n in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+
+3.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~6 debug messages>
+
+3.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+     1/6: $0\dst_pulse[0:0]
+     2/6: $3\idx[31:0]
+     3/6: $0\req_sync_q[1][0:0]
+     4/6: $0\req_sync_q[0][0:0]
+     5/6: $0\dst_seen_toggle_q[0:0]
+     6/6: $0\dst_ack_toggle_q[0:0]
+Creating decoders for process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+     1/4: $1\idx[31:0]
+     2/4: $0\ack_sync_q[1][0:0]
+     3/4: $0\ack_sync_q[0][0:0]
+     4/4: $0\src_toggle_q[0:0]
+Creating decoders for process `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:31$26'.
+Creating decoders for process `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+     1/5: $assert$pulse_synchronizer_formal.sv:55$23_EN
+     2/5: $assert$pulse_synchronizer_formal.sv:48$20_EN
+     3/5: $assert$pulse_synchronizer_formal.sv:45$17_EN
+     4/5: $assume$pulse_synchronizer_formal.sv:44$15_EN
+     5/5: $0\prev_dst_pulse_sampled[0:0]
+
+3.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\dst_pulse' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+  created $adff cell `$procdff$65' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\dst_ack_toggle_q' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+  created $adff cell `$procdff$70' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\dst_seen_toggle_q' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+  created $adff cell `$procdff$75' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\idx' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+  created $adff cell `$procdff$80' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\req_sync_q[0]' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+  created $adff cell `$procdff$85' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\req_sync_q[1]' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+  created $adff cell `$procdff$90' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\src_toggle_q' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+  created $adff cell `$procdff$95' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\idx' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+  created $adff cell `$procdff$100' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\ack_sync_q[0]' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+  created $adff cell `$procdff$105' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.\ack_sync_q[1]' using process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+  created $adff cell `$procdff$110' with positive edge clock and positive level reset.
+Creating register for signal `\pulse_synchronizer_formal.\formal_ticks' using process `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+  created $ff cell `$procdff$111' with global clock.
+Creating register for signal `\pulse_synchronizer_formal.\prev_src_clk' using process `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+  created $ff cell `$procdff$112' with global clock.
+Creating register for signal `\pulse_synchronizer_formal.\prev_dst_clk' using process `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+  created $ff cell `$procdff$113' with global clock.
+Creating register for signal `\pulse_synchronizer_formal.\prev_dst_pulse_sampled' using process `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+  created $ff cell `$procdff$114' with global clock.
+
+3.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+Removing empty process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:47$33'.
+Found and cleaned up 1 empty switch in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+Removing empty process `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.$proc$pulse_synchronizer.sv:28$28'.
+Removing empty process `pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:31$26'.
+Found and cleaned up 4 empty switches in `\pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+Removing empty process `pulse_synchronizer_formal.$proc$pulse_synchronizer_formal.sv:38$12'.
+Cleaned up 6 empty switches.
+
+3.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+<suppressed ~20 debug messages>
+Optimizing module pulse_synchronizer_formal.
+<suppressed ~5 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Optimizing module pulse_synchronizer_formal.
+
+3.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module \pulse_synchronizer_formal..
+Removed 20 unused cells and 70 unused wires.
+<suppressed ~25 debug messages>
+
+3.7. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010...
+Checking module pulse_synchronizer_formal...
+Found and reported 0 problems.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Optimizing module pulse_synchronizer_formal.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Computing hashes of 17 cells of `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding duplicate cells in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding identical cells in module `\pulse_synchronizer_formal'.
+Computing hashes of 26 cells of `\pulse_synchronizer_formal'.
+Finding duplicate cells in `\pulse_synchronizer_formal'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pulse_synchronizer_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+  Optimizing cells in module \pulse_synchronizer_formal.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Computing hashes of 17 cells of `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding duplicate cells in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding identical cells in module `\pulse_synchronizer_formal'.
+Computing hashes of 26 cells of `\pulse_synchronizer_formal'.
+Finding duplicate cells in `\pulse_synchronizer_formal'.
+Computing hashes of 25 cells of `\pulse_synchronizer_formal'.
+Finding duplicate cells in `\pulse_synchronizer_formal'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module \pulse_synchronizer_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Optimizing module pulse_synchronizer_formal.
+
+3.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pulse_synchronizer_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+3.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+  Optimizing cells in module \pulse_synchronizer_formal.
+Performed a total of 0 changes.
+
+3.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Computing hashes of 17 cells of `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding duplicate cells in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding identical cells in module `\pulse_synchronizer_formal'.
+Computing hashes of 25 cells of `\pulse_synchronizer_formal'.
+Finding duplicate cells in `\pulse_synchronizer_formal'.
+Removed a total of 0 cells.
+
+3.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module \pulse_synchronizer_formal..
+
+3.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Optimizing module pulse_synchronizer_formal.
+
+3.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 5) from port B of cell pulse_synchronizer_formal.$ge$pulse_synchronizer_formal.sv:9$5 ($ge).
+Removed top 2 bits (of 5) from port B of cell pulse_synchronizer_formal.$ge$pulse_synchronizer_formal.sv:10$6 ($ge).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module \pulse_synchronizer_formal..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010.
+Optimizing module pulse_synchronizer_formal.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Computing hashes of 17 cells of `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding duplicate cells in `$paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010'.
+Finding identical cells in module `\pulse_synchronizer_formal'.
+Computing hashes of 25 cells of `\pulse_synchronizer_formal'.
+Finding duplicate cells in `\pulse_synchronizer_formal'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module \pulse_synchronizer_formal..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       22 wires
+       22 wire bits
+       14 public wires
+       14 public wire bits
+        7 ports
+        7 port bits
+       17 cells
+        8   $adff
+        1   $logic_and
+        1   $logic_not
+        4   $mux
+        2   $ne
+        1   $not
+
+=== pulse_synchronizer_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       24 wires
+       32 wire bits
+       11 public wires
+       15 public wire bits
+       24 cells
+        1   $add
+        1   $anyseq
+        4   $check
+        3   $ff
+        2   $ge
+        2   $logic_and
+        5   $logic_not
+        6   $mux
+        1 submodules
+        1   $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       41 pulse_synchronizer_formal
+       17 $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+
+        +----------Count including submodules.
+        | 
+       46 wires
+       54 wire bits
+       25 public wires
+       29 public wire bits
+        7 ports
+        7 port bits
+        - memories
+        - memory bits
+        - processes
+       41 cells
+        1   $add
+        8   $adff
+        1   $anyseq
+        4   $check
+        3   $ff
+        2   $ge
+        3   $logic_and
+        6   $logic_not
+       10   $mux
+        2   $ne
+        1   $not
+        1 submodules
+        1   $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010...
+Checking module pulse_synchronizer_formal...
+Found and reported 0 problems.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `pulse_synchronizer_formal'. Setting top module to pulse_synchronizer_formal.
+
+4.1. Analyzing design hierarchy..
+Top module:  \pulse_synchronizer_formal
+Used module:     $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+
+4.2. Analyzing design hierarchy..
+Top module:  \pulse_synchronizer_formal
+Used module:     $paramod\pulse_synchronizer\SYNC_STAGES=s32'00000000000000000000000000000010
+Removed 0 unused modules.
+Module pulse_synchronizer_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing jny backend.
+
+6. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 426a2d5956
+Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+Time spent: 3% 6x opt_expr (0 sec), 3% 5x opt_clean (0 sec), ...
