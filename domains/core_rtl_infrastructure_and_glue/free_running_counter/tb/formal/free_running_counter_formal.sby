@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal free_running_counter.sv free_running_counter_formal.sv
+prep -top free_running_counter_formal
+
+[files]
+../../rtl/free_running_counter.sv
+free_running_counter_formal.sv
