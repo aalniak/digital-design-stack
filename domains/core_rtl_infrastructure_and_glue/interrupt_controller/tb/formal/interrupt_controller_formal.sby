@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal interrupt_controller.sv interrupt_controller_formal.sv
+prep -top interrupt_controller_formal
+
+[files]
+../../rtl/interrupt_controller.sv
+interrupt_controller_formal.sv

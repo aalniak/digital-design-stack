@@ -23,6 +23,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 9. `timer_block`
    - verification: simulation, synthesis sanity, formal
+10. `interrupt_controller`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -40,10 +42,10 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `capture_compare_block`
-2. `interrupt_controller`
-3. `wakeup_controller`
-4. `stream_fifo`
+1. `wakeup_controller`
+2. `stream_fifo`
+3. `packet_fifo`
+4. `width_converter`
 
 ## Current Guidance
 
