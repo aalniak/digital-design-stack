@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal timer_block.sv timer_block_formal.sv
+prep -top timer_block_formal
+
+[files]
+../../rtl/timer_block.sv
+timer_block_formal.sv
