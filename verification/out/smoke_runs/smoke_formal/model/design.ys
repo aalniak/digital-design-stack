@@ -1,0 +1,8 @@
+# running in C:\digital_design_stack\verification\out\smoke_runs\smoke_formal/src/
+read -formal smoke_formal.v
+prep -top smoke_formal
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

@@ -1,0 +1,484 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: async_fifo_core.sv
+Parsing formal SystemVerilog input from `async_fifo_core.sv' to AST representation.
+Storing AST representation for module `$abstract\async_fifo_core'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: async_fifo_core_formal.sv
+Parsing formal SystemVerilog input from `async_fifo_core_formal.sv' to AST representation.
+Storing AST representation for module `$abstract\async_fifo_core_formal'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\async_fifo_core_formal'.
+Generating RTLIL representation for module `\async_fifo_core_formal'.
+
+3.2.1. Analyzing design hierarchy..
+Top module:  \async_fifo_core_formal
+Parameter \DATA_WIDTH = 8
+Parameter \DEPTH = 4
+Parameter \SYNC_STAGES = 2
+Parameter \ALMOST_FULL_THRESHOLD = 3
+Parameter \ALMOST_EMPTY_THRESHOLD = 1
+
+3.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\async_fifo_core'.
+Parameter \DATA_WIDTH = 8
+Parameter \DEPTH = 4
+Parameter \SYNC_STAGES = 2
+Parameter \ALMOST_FULL_THRESHOLD = 3
+Parameter \ALMOST_EMPTY_THRESHOLD = 1
+Generating RTLIL representation for module `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Warning: Replacing memory \wr_ptr_gray_sync_q with list of registers. See async_fifo_core.sv:152
+Warning: Replacing memory \storage with list of registers. See async_fifo_core.sv:138
+Warning: Replacing memory \rd_ptr_gray_sync_q with list of registers. See async_fifo_core.sv:126
+
+3.2.3. Analyzing design hierarchy..
+Top module:  \async_fifo_core_formal
+Used module:     $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+
+3.2.4. Analyzing design hierarchy..
+Top module:  \async_fifo_core_formal
+Used module:     $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+Removing unused module `$abstract\async_fifo_core_formal'.
+Removing unused module `$abstract\async_fifo_core'.
+Removed 2 unused modules.
+Module async_fifo_core_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3.3. Executing PROC pass (convert processes to netlists).
+
+3.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 6 empty switches in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:61$103'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:61$103'.
+Cleaned up 6 empty switches.
+
+3.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$async_fifo_core.sv:117$100 in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Marked 1 switch rules as full_case in process $proc$async_fifo_core.sv:117$100 in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Marked 1 switch rules as full_case in process $proc$async_fifo_core.sv:145$71 in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Marked 3 switch rules as full_case in process $proc$async_fifo_core.sv:119$62 in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Removed a total of 1 dead cases.
+
+3.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 25 assignments to connections.
+
+3.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:54$36'.
+  Set init value: \formal_ticks = 4'0000
+
+3.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rd_rst_n in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+Found async reset \wr_rst_n in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+
+3.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~7 debug messages>
+
+3.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:117$100'.
+     1/1: $1$mem2reg_rd$\storage$async_fifo_core.sv:117$45_DATA[7:0]$102
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:108$94'.
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:107$88'.
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:87$81'.
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:86$74'.
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+     1/7: $0\rd_empty[0:0]
+     2/7: $0\rd_underflow[0:0]
+     3/7: $1\rd_stage[31:0]
+     4/7: $0\wr_ptr_gray_sync_q[1][2:0]
+     5/7: $0\wr_ptr_gray_sync_q[0][2:0]
+     6/7: $0\rd_ptr_gray_q[2:0]
+     7/7: $0\rd_ptr_bin_q[2:0]
+Creating decoders for process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+     1/15: $2$mem2reg_wr$\storage$async_fifo_core.sv:138$46_ADDR[1:0]$69
+     2/15: $2$mem2reg_wr$\storage$async_fifo_core.sv:138$46_DATA[7:0]$70
+     3/15: $1$mem2reg_wr$\storage$async_fifo_core.sv:138$46_DATA[7:0]$67
+     4/15: $1$mem2reg_wr$\storage$async_fifo_core.sv:138$46_ADDR[1:0]$66
+     5/15: $0\wr_full[0:0]
+     6/15: $0\wr_overflow[0:0]
+     7/15: $1\wr_stage[31:0]
+     8/15: $0\rd_ptr_gray_sync_q[1][2:0]
+     9/15: $0\rd_ptr_gray_sync_q[0][2:0]
+    10/15: $0\storage[3][7:0]
+    11/15: $0\storage[2][7:0]
+    12/15: $0\storage[1][7:0]
+    13/15: $0\storage[0][7:0]
+    14/15: $0\wr_ptr_gray_q[2:0]
+    15/15: $0\wr_ptr_bin_q[2:0]
+Creating decoders for process `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:54$36'.
+Creating decoders for process `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:76$30'.
+     1/2: $assert$async_fifo_core_formal.sv:79$34_EN
+     2/2: $assume$async_fifo_core_formal.sv:78$32_EN
+Creating decoders for process `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:69$24'.
+     1/2: $assert$async_fifo_core_formal.sv:72$28_EN
+     2/2: $assume$async_fifo_core_formal.sv:71$26_EN
+Creating decoders for process `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:58$11'.
+     1/4: $assert$async_fifo_core_formal.sv:65$21_EN
+     2/4: $assert$async_fifo_core_formal.sv:64$18_EN
+     3/4: $assert$async_fifo_core_formal.sv:63$16_EN
+     4/4: $assert$async_fifo_core_formal.sv:62$14_EN
+
+3.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$mem2reg_rd$\storage$async_fifo_core.sv:117$45_DATA' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:117$100'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\bin_to_gray$func$async_fifo_core.sv:108$40.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:108$94'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\bin_to_gray$func$async_fifo_core.sv:108$44.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:108$94'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\bin_to_gray$func$async_fifo_core.sv:108$44.bin_value' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:108$94'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\bin_to_gray$func$async_fifo_core.sv:107$39.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:107$88'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\bin_to_gray$func$async_fifo_core.sv:107$43.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:107$88'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\bin_to_gray$func$async_fifo_core.sv:107$43.bin_value' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:107$88'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:87$38.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:87$81'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:87$42.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:87$81'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:87$42.gray_value' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:87$81'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:87$42.bit_idx' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:87$81'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:86$37.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:86$74'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:86$41.$result' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:86$74'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:86$41.gray_value' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:86$74'.
+No latch inferred for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\gray_to_bin$func$async_fifo_core.sv:86$41.bit_idx' from process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:86$74'.
+
+3.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_empty' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$171' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_underflow' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$176' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_ptr_bin_q' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$181' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_ptr_gray_q' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$186' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_stage' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$191' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_ptr_gray_sync_q[0]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$196' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_ptr_gray_sync_q[1]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+  created $adff cell `$procdff$201' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_full' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$206' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_overflow' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$211' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_ptr_bin_q' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$216' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_ptr_gray_q' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$221' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\wr_stage' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$226' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_ptr_gray_sync_q[0]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$231' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\rd_ptr_gray_sync_q[1]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $adff cell `$procdff$236' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\storage[0]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $dff cell `$procdff$243' with positive edge clock.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\storage[1]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $dff cell `$procdff$250' with positive edge clock.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\storage[2]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $dff cell `$procdff$257' with positive edge clock.
+Creating register for signal `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.\storage[3]' using process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+  created $dff cell `$procdff$264' with positive edge clock.
+Creating register for signal `\async_fifo_core_formal.\formal_ticks' using process `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:58$11'.
+  created $ff cell `$procdff$265' with global clock.
+
+3.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:117$100'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:117$100'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:108$94'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:107$88'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:87$81'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:86$74'.
+Found and cleaned up 1 empty switch in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:145$71'.
+Found and cleaned up 2 empty switches in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+Removing empty process `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$proc$async_fifo_core.sv:119$62'.
+Removing empty process `async_fifo_core_formal.$proc$async_fifo_core_formal.sv:54$36'.
+Found and cleaned up 1 empty switch in `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:76$30'.
+Removing empty process `async_fifo_core_formal.$proc$async_fifo_core_formal.sv:76$30'.
+Found and cleaned up 1 empty switch in `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:69$24'.
+Removing empty process `async_fifo_core_formal.$proc$async_fifo_core_formal.sv:69$24'.
+Found and cleaned up 1 empty switch in `\async_fifo_core_formal.$proc$async_fifo_core_formal.sv:58$11'.
+Removing empty process `async_fifo_core_formal.$proc$async_fifo_core_formal.sv:58$11'.
+Cleaned up 7 empty switches.
+
+3.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+<suppressed ~40 debug messages>
+Optimizing module async_fifo_core_formal.
+<suppressed ~6 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Optimizing module async_fifo_core_formal.
+
+3.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+Finding unused cells or wires in module \async_fifo_core_formal..
+Removed 26 unused cells and 152 unused wires.
+<suppressed ~30 debug messages>
+
+3.7. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core...
+Checking module async_fifo_core_formal...
+Found and reported 0 problems.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Optimizing module async_fifo_core_formal.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Computing hashes of 64 cells of `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding duplicate cells in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding identical cells in module `\async_fifo_core_formal'.
+Computing hashes of 34 cells of `\async_fifo_core_formal'.
+Finding duplicate cells in `\async_fifo_core_formal'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \async_fifo_core_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~46 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+  Optimizing cells in module \async_fifo_core_formal.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Computing hashes of 64 cells of `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding duplicate cells in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding identical cells in module `\async_fifo_core_formal'.
+Computing hashes of 34 cells of `\async_fifo_core_formal'.
+Finding duplicate cells in `\async_fifo_core_formal'.
+Computing hashes of 29 cells of `\async_fifo_core_formal'.
+Finding duplicate cells in `\async_fifo_core_formal'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+Finding unused cells or wires in module \async_fifo_core_formal..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Optimizing module async_fifo_core_formal.
+
+3.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \async_fifo_core_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+3.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+  Optimizing cells in module \async_fifo_core_formal.
+Performed a total of 0 changes.
+
+3.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Computing hashes of 64 cells of `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding duplicate cells in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding identical cells in module `\async_fifo_core_formal'.
+Computing hashes of 29 cells of `\async_fifo_core_formal'.
+Finding duplicate cells in `\async_fifo_core_formal'.
+Removed a total of 0 cells.
+
+3.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+Finding unused cells or wires in module \async_fifo_core_formal..
+
+3.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Optimizing module async_fifo_core_formal.
+
+3.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from port B of cell $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$ge$async_fifo_core.sv:113$60 ($ge).
+Removed top 2 bits (of 3) from port B of cell $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$le$async_fifo_core.sv:114$61 ($le).
+Removed top 1 bits (of 3) from port A of cell $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$xor$async_fifo_core.sv:46$93 ($xor).
+Removed top 1 bits (of 3) from port A of cell $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$xor$async_fifo_core.sv:46$99 ($xor).
+Removed top 1 bits (of 2) from port B of cell $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$procmux$107_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.$procmux$134_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell async_fifo_core_formal.$ge$async_fifo_core_formal.sv:12$6 ($ge).
+Removed top 1 bits (of 4) from port B of cell async_fifo_core_formal.$ge$async_fifo_core_formal.sv:13$7 ($ge).
+Removed top 29 bits (of 32) from port B of cell async_fifo_core_formal.$le$async_fifo_core_formal.sv:62$15 ($le).
+Removed top 29 bits (of 32) from port B of cell async_fifo_core_formal.$le$async_fifo_core_formal.sv:63$17 ($le).
+Removed top 30 bits (of 32) from port B of cell async_fifo_core_formal.$ge$async_fifo_core_formal.sv:64$19 ($ge).
+Removed top 31 bits (of 32) from port B of cell async_fifo_core_formal.$le$async_fifo_core_formal.sv:65$22 ($le).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+Finding unused cells or wires in module \async_fifo_core_formal..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core.
+Optimizing module async_fifo_core_formal.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Computing hashes of 64 cells of `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding duplicate cells in `$paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core'.
+Finding identical cells in module `\async_fifo_core_formal'.
+Computing hashes of 29 cells of `\async_fifo_core_formal'.
+Finding duplicate cells in `\async_fifo_core_formal'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core..
+Finding unused cells or wires in module \async_fifo_core_formal..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       81 wires
+      335 wire bits
+       53 public wires
+      215 public wire bits
+       16 ports
+       34 port bits
+       64 cells
+        2   $add
+       12   $adff
+        4   $dff
+        8   $eq
+        1   $ge
+        1   $le
+        4   $logic_and
+        4   $logic_not
+       18   $mux
+        1   $not
+        1   $pmux
+        2   $sub
+        6   $xor
+
+=== async_fifo_core_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       31 wires
+       55 wire bits
+       17 public wires
+       38 public wire bits
+       28 cells
+        1   $add
+        3   $anyseq
+        8   $check
+        2   $eq
+        1   $ff
+        3   $ge
+        3   $le
+        1   $logic_and
+        2   $logic_not
+        3   $mux
+        1   $not
+        1 submodules
+        1   $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       92 async_fifo_core_formal
+       64 $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+
+        +----------Count including submodules.
+        | 
+      112 wires
+      390 wire bits
+       70 public wires
+      253 public wire bits
+       16 ports
+       34 port bits
+        - memories
+        - memory bits
+        - processes
+       92 cells
+        3   $add
+       12   $adff
+        3   $anyseq
+        8   $check
+        4   $dff
+       10   $eq
+        1   $ff
+        4   $ge
+        4   $le
+        5   $logic_and
+        6   $logic_not
+       21   $mux
+        2   $not
+        1   $pmux
+        2   $sub
+        6   $xor
+        1 submodules
+        1   $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core...
+Checking module async_fifo_core_formal...
+Found and reported 0 problems.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `async_fifo_core_formal'. Setting top module to async_fifo_core_formal.
+
+4.1. Analyzing design hierarchy..
+Top module:  \async_fifo_core_formal
+Used module:     $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+
+4.2. Analyzing design hierarchy..
+Top module:  \async_fifo_core_formal
+Used module:     $paramod$d885179fbfec301af1faa35f2ea14d07bc41f6d0\async_fifo_core
+Removed 0 unused modules.
+Module async_fifo_core_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing jny backend.
+
+6. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: af612890dc
+Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+Time spent: 3% 6x opt_expr (0 sec), 3% 5x opt_clean (0 sec), ...

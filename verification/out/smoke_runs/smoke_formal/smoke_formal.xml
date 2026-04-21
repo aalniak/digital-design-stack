@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-04-21T17:37:33" hostname="DESKTOP-HDA2TU4" package="smoke_formal" id="0" name="default" tests="1" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Windows"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in smoke_formal at smoke_formal.v:9.9-9.30" time="0" type="ASSERT" location="smoke_formal.v:9.9-9.30" id="_witness_.check_assert_smoke_formal_v_9_3">
+</testcase>
+<system-out>SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] Removing directory 'C:\digital_design_stack\verification\out\smoke_runs\smoke_formal'.
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] Copy 'C:\digital_design_stack\verification\smoke\smoke_formal.v' to 'C:\digital_design_stack\verification\out\smoke_runs\smoke_formal\src\smoke_formal.v'.
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0: smtbmc z3
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] base: starting process &quot;cd C:\digital_design_stack\verification\out\smoke_runs\smoke_formal/src&amp; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] base: finished (returncode=0)
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] prep: starting process &quot;cd C:\digital_design_stack\verification\out\smoke_runs\smoke_formal/model&amp; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] prep: finished (returncode=0)
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] smt2: starting process &quot;cd C:\digital_design_stack\verification\out\smoke_runs\smoke_formal/model&amp; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] smt2: finished (returncode=0)
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: starting process &quot;cd C:\digital_design_stack\verification\out\smoke_runs\smoke_formal&amp; yosys-smtbmc -s z3 --presat --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: starting process &quot;cd C:\digital_design_stack\verification\out\smoke_runs\smoke_formal&amp; yosys-smtbmc -s z3 --presat -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: ##   0:00:00  Trying induction in step 20..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: ##   0:00:00  Status: passed
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: finished (returncode=0)
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: finished (returncode=0)
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] engine_0.induction: Status returned by engine for induction: pass
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] summary: Elapsed process time unvailable on Windows
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] summary: engine_0 did not produce any traces
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] summary: successful proof by k-induction.
+SBY 17:37:33 [C:\digital_design_stack\verification\out\smoke_runs\smoke_formal] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

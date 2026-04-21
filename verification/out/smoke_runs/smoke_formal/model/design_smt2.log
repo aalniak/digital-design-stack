@@ -1,0 +1,54 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `smoke_formal'. Setting top module to smoke_formal.
+
+2.1. Analyzing design hierarchy..
+Top module:  \smoke_formal
+
+2.2. Analyzing design hierarchy..
+Top module:  \smoke_formal
+Removed 0 unused modules.
+Module smoke_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== smoke_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+        3 wire bits
+        3 public wires
+        3 public wire bits
+        3 ports
+        3 port bits
+        2 cells
+        1   $and
+        1   $assert
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module smoke_formal.
+
+End of script. Logfile hash: 46eb4dcf1c
+Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+Time spent: 10% 2x write_smt2 (0 sec), 10% 2x read_rtlil (0 sec), ...

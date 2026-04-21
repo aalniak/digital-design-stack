@@ -1,0 +1,235 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: smoke_formal.v
+Parsing formal SystemVerilog input from `smoke_formal.v' to AST representation.
+Storing AST representation for module `$abstract\smoke_formal'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\smoke_formal'.
+Generating RTLIL representation for module `\smoke_formal'.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \smoke_formal
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \smoke_formal
+Removing unused module `$abstract\smoke_formal'.
+Removed 1 unused modules.
+Module smoke_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 1 assignment to connection.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\smoke_formal.$proc$smoke_formal.v:8$2'.
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `smoke_formal.$proc$smoke_formal.v:8$2'.
+Cleaned up 0 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+
+2.4. Executing FUTURE pass.
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \smoke_formal..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module smoke_formal...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\smoke_formal'.
+Computing hashes of 4 cells of `\smoke_formal'.
+Finding duplicate cells in `\smoke_formal'.
+Computing hashes of 3 cells of `\smoke_formal'.
+Finding duplicate cells in `\smoke_formal'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \smoke_formal..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \smoke_formal.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\smoke_formal'.
+Computing hashes of 3 cells of `\smoke_formal'.
+Finding duplicate cells in `\smoke_formal'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \smoke_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+<suppressed ~1 debug messages>
+
+2.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \smoke_formal..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \smoke_formal.
+Performed a total of 0 changes.
+
+2.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\smoke_formal'.
+Computing hashes of 2 cells of `\smoke_formal'.
+Finding duplicate cells in `\smoke_formal'.
+Removed a total of 0 cells.
+
+2.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \smoke_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+
+2.8.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \smoke_formal..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.8.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \smoke_formal.
+Performed a total of 0 changes.
+
+2.8.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\smoke_formal'.
+Computing hashes of 2 cells of `\smoke_formal'.
+Finding duplicate cells in `\smoke_formal'.
+Removed a total of 0 cells.
+
+2.8.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \smoke_formal..
+
+2.8.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+
+2.8.20. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \smoke_formal..
+
+2.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module smoke_formal.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\smoke_formal'.
+Computing hashes of 2 cells of `\smoke_formal'.
+Finding duplicate cells in `\smoke_formal'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \smoke_formal..
+
+2.12.4. Finished fast OPT passes.
+
+2.13. Executing SORT pass.
+
+2.14. Printing statistics.
+
+=== smoke_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+        3 wire bits
+        3 public wires
+        3 public wire bits
+        3 ports
+        3 port bits
+        2 cells
+        1   $and
+        1   $check
+
+2.15. Executing CHECK pass (checking for obvious problems).
+Checking module smoke_formal...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `smoke_formal'. Setting top module to smoke_formal.
+
+3.1. Analyzing design hierarchy..
+Top module:  \smoke_formal
+
+3.2. Analyzing design hierarchy..
+Top module:  \smoke_formal
+Removed 0 unused modules.
+Module smoke_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 3709180d80
+Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+Time spent: 3% 7x opt_expr (0 sec), 3% 6x opt_clean (0 sec), ...

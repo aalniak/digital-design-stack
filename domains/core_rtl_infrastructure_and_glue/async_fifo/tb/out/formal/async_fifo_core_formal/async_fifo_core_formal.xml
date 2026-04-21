@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-04-21T19:13:22" hostname="DESKTOP-HDA2TU4" package="async_fifo_core_formal" id="0" name="default" tests="6" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Windows"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in async_fifo_core_formal at async_fifo_core_formal.sv:62.13-62.38" time="0" type="ASSERT" location="async_fifo_core_formal.sv:62.13-62.38" id="_witness_.check_assert_async_fifo_core_formal_sv_62_14">
+</testcase>
+<testcase classname="default" name="Property ASSERT in async_fifo_core_formal at async_fifo_core_formal.sv:63.13-63.38" time="0" type="ASSERT" location="async_fifo_core_formal.sv:63.13-63.38" id="_witness_.check_assert_async_fifo_core_formal_sv_63_16">
+</testcase>
+<testcase classname="default" name="Property ASSERT in async_fifo_core_formal at async_fifo_core_formal.sv:64.13-64.64" time="0" type="ASSERT" location="async_fifo_core_formal.sv:64.13-64.64" id="_witness_.check_assert_async_fifo_core_formal_sv_64_18">
+</testcase>
+<testcase classname="default" name="Property ASSERT in async_fifo_core_formal at async_fifo_core_formal.sv:65.13-65.55" time="0" type="ASSERT" location="async_fifo_core_formal.sv:65.13-65.55" id="_witness_.check_assert_async_fifo_core_formal_sv_65_21">
+</testcase>
+<testcase classname="default" name="Property ASSERT in async_fifo_core_formal at async_fifo_core_formal.sv:72.13-72.36" time="0" type="ASSERT" location="async_fifo_core_formal.sv:72.13-72.36" id="_witness_.check_assert_async_fifo_core_formal_sv_72_28">
+</testcase>
+<testcase classname="default" name="Property ASSERT in async_fifo_core_formal at async_fifo_core_formal.sv:79.13-79.37" time="0" type="ASSERT" location="async_fifo_core_formal.sv:79.13-79.37" id="_witness_.check_assert_async_fifo_core_formal_sv_79_34">
+</testcase>
+<system-out>SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] Removing directory 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal'.
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] Copy 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\formal\..\..\rtl\async_fifo_core.sv' to 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal\src\async_fifo_core.sv'.
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] Copy 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\formal\async_fifo_core_formal.sv' to 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal\src\async_fifo_core_formal.sv'.
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0: smtbmc z3
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] base: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal/src&amp; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] base: Warning: Replacing memory \wr_ptr_gray_sync_q with list of registers. See async_fifo_core.sv:152
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] base: Warning: Replacing memory \storage with list of registers. See async_fifo_core.sv:138
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] base: Warning: Replacing memory \rd_ptr_gray_sync_q with list of registers. See async_fifo_core.sv:126
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] base: finished (returncode=0)
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] prep: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal/model&amp; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] prep: finished (returncode=0)
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] smt2: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal/model&amp; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] smt2: finished (returncode=0)
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal&amp; yosys-smtbmc -s z3 --presat --noprogress -t 32  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal&amp; yosys-smtbmc -s z3 --presat -i --noprogress -t 32  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 32..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 31..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 30..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 29..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 28..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 27..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 26..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 25..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 24..
+SBY 19:13:21 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 23..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 22..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 21..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 20..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Trying induction in step 19..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: ##   0:00:00  Status: passed
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 20..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 20..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 21..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 21..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 22..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 22..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 23..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 23..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 24..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 24..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 25..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 25..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 26..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 26..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 27..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 27..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 28..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 28..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 29..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 29..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 30..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 30..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 31..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 31..
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: finished (returncode=0)
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: finished (returncode=0)
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] engine_0.induction: Status returned by engine for induction: pass
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] summary: Elapsed process time unvailable on Windows
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] summary: engine_0 did not produce any traces
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] summary: successful proof by k-induction.
+SBY 19:13:22 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\async_fifo\tb\out\formal\async_fifo_core_formal] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

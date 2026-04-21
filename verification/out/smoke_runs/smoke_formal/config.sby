@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal smoke_formal.v
+prep -top smoke_formal
+
+[files]
+smoke_formal.v

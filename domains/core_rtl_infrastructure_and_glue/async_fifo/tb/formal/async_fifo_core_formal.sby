@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal async_fifo_core.sv async_fifo_core_formal.sv
+prep -top async_fifo_core_formal
+
+[files]
+../../rtl/async_fifo_core.sv
+async_fifo_core_formal.sv
