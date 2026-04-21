@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal skid_buffer.sv skid_buffer_formal.sv
+prep -top skid_buffer_formal
+
+[files]
+../../rtl/skid_buffer.sv
+skid_buffer_formal.sv

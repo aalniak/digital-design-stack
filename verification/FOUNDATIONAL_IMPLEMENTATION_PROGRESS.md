@@ -19,6 +19,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 7. `register_slice`
    - verification: simulation, synthesis sanity, formal
+8. `skid_buffer`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -38,8 +40,8 @@ The next strongest low-risk foundational modules are:
 
 1. `event_counter`
 2. `free_running_counter`
-3. `skid_buffer`
-4. `timer_block`
+3. `timer_block`
+4. `capture_compare_block`
 
 ## Current Guidance
 
