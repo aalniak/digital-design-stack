@@ -33,6 +33,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 14. `packet_fifo`
    - verification: simulation, synthesis sanity, formal
+15. `stream_demux`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -51,10 +53,10 @@ Each implemented module now has:
 The next strongest low-risk foundational modules are:
 
 1. `round_robin_arbiter`
-2. `stream_demux`
-3. `width_converter`
-4. `stream_mux`
-5. `stream_join`
+2. `width_converter`
+3. `stream_mux`
+4. `stream_join`
+5. `stream_fork`
 
 ## Current Guidance
 

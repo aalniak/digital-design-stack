@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal stream_demux.sv stream_demux_formal.sv
+prep -top stream_demux_formal
+
+[files]
+../../rtl/stream_demux.sv
+stream_demux_formal.sv
