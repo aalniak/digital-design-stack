@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal round_robin_arbiter.sv round_robin_arbiter_formal.sv
+prep -top round_robin_arbiter_formal
+
+[files]
+../../rtl/round_robin_arbiter.sv
+round_robin_arbiter_formal.sv
