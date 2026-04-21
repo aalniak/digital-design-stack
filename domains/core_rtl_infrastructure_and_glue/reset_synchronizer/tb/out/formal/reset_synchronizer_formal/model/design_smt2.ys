@@ -1,0 +1,8 @@
+# running in C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal\model/
+read_rtlil design_prep.il
+hierarchy -smtcheck
+delete */t:$print
+formalff -assume
+dffunmap
+stat
+write_smt2 -wires design_smt2.smt2

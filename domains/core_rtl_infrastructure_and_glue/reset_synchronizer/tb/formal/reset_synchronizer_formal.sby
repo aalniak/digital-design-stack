@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal reset_synchronizer.sv reset_synchronizer_formal.sv
+prep -top reset_synchronizer_formal
+
+[files]
+../../rtl/reset_synchronizer.sv
+reset_synchronizer_formal.sv

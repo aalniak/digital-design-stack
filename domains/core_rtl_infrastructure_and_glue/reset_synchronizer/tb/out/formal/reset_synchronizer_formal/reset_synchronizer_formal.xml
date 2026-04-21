@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-04-21T20:31:08" hostname="DESKTOP-HDA2TU4" package="reset_synchronizer_formal" id="0" name="default" tests="4" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Windows"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in reset_synchronizer_formal at reset_synchronizer_formal.sv:29.13-29.29" time="0" type="ASSERT" location="reset_synchronizer_formal.sv:29.13-29.29" id="_witness_.check_assert_reset_synchronizer_formal_sv_29_7">
+</testcase>
+<testcase classname="default" name="Property ASSERT in reset_synchronizer_formal at reset_synchronizer_formal.sv:30.13-30.34" time="0" type="ASSERT" location="reset_synchronizer_formal.sv:30.13-30.34" id="_witness_.check_assert_reset_synchronizer_formal_sv_30_9">
+</testcase>
+<testcase classname="default" name="Property ASSERT in reset_synchronizer_formal at reset_synchronizer_formal.sv:34.13-34.28" time="0" type="ASSERT" location="reset_synchronizer_formal.sv:34.13-34.28" id="_witness_.check_assert_reset_synchronizer_formal_sv_34_11">
+</testcase>
+<testcase classname="default" name="Property ASSERT in reset_synchronizer_formal at reset_synchronizer_formal.sv:37.9-37.40" time="0" type="ASSERT" location="reset_synchronizer_formal.sv:37.9-37.40" id="_witness_.check_assert_reset_synchronizer_formal_sv_37_12">
+</testcase>
+<system-out>SBY 20:31:07 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] Removing directory 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal'.
+SBY 20:31:07 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] Copy 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\formal\..\..\rtl\reset_synchronizer.sv' to 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal\src\reset_synchronizer.sv'.
+SBY 20:31:07 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] Copy 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\formal\reset_synchronizer_formal.sv' to 'C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal\src\reset_synchronizer_formal.sv'.
+SBY 20:31:07 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0: smtbmc z3
+SBY 20:31:07 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] base: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal/src&amp; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] base: finished (returncode=0)
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] prep: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal/model&amp; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] prep: finished (returncode=0)
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] smt2: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal/model&amp; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] smt2: finished (returncode=0)
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal&amp; yosys-smtbmc -s z3 --presat --noprogress -t 24  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: starting process &quot;cd C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal&amp; yosys-smtbmc -s z3 --presat -i --noprogress -t 24  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: ##   0:00:00  Trying induction in step 24..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: ##   0:00:00  Status: passed
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 20..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 20..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 21..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 21..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 22..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 22..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assumptions in step 23..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Checking assertions in step 23..
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: finished (returncode=0)
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: finished (returncode=0)
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] engine_0.induction: Status returned by engine for induction: pass
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] summary: Elapsed process time unvailable on Windows
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] summary: engine_0 did not produce any traces
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] summary: successful proof by k-induction.
+SBY 20:31:08 [C:\digital_design_stack\domains\core_rtl_infrastructure_and_glue\reset_synchronizer\tb\out\formal\reset_synchronizer_formal] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

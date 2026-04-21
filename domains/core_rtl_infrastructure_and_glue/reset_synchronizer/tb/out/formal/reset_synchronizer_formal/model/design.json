@@ -1,0 +1,475 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/main/misc/jny.schema.json",
+  "generator": "Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\\reset_synchronizer",
+        "cell_sorts": [
+          {
+            "type": "$adff",
+            "ports": [
+                {
+                  "name": "ARST",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [2, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$27",
+                  "attributes": {
+                    "src": "reset_synchronizer.sv:24.13-31.16"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "00000000000000000000000000000000",
+                    "ARST_VALUE": "11",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$reset_synchronizer.sv:45$16",
+                  "attributes": {
+                    "src": "reset_synchronizer.sv:45.28-45.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "dynports": "00000000000000000000000000000001",
+            "hdlname": "reset_synchronizer",
+            "src": "reset_synchronizer.sv:1.1-47.10"
+        }
+      },
+      {
+        "name": "reset_synchronizer_formal",
+        "cell_sorts": [
+          {
+            "type": "$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\\reset_synchronizer",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "release_done",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "rst_in",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "rst_out",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "dut",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "reset_synchronizer_formal.sv:14.7-19.6"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$check",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ARGS",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "TRG",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "_witness_.check_assert_reset_synchronizer_formal_sv_29_7",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_reset_synchronizer_formal_sv_29_7",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "reset_synchronizer_formal.sv:29.13-29.29"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_reset_synchronizer_formal_sv_30_9",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_reset_synchronizer_formal_sv_30_9",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "reset_synchronizer_formal.sv:30.13-30.34"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111110",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_reset_synchronizer_formal_sv_34_11",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_reset_synchronizer_formal_sv_34_11",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "reset_synchronizer_formal.sv:34.13-34.28"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111101",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_reset_synchronizer_formal_sv_37_12",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_reset_synchronizer_formal_sv_37_12",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "reset_synchronizer_formal.sv:37.9-37.40"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111100",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$19",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:33.13-33.25|reset_synchronizer_formal.sv:33.9-35.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$23",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:28.13-28.20|reset_synchronizer_formal.sv:28.9-31.12"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$reset_synchronizer_formal.sv:6$3",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:6.19-6.58"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ff",
+            "ports": [
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [5, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$28",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:25.5-38.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$lt",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$lt$reset_synchronizer_formal.sv:6$2",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:6.20-6.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_not$reset_synchronizer_formal.sv:29$8",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:29.20-29.28"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$reset_synchronizer_formal.sv:30$10",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:30.20-30.33"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$reset_synchronizer_formal.sv:37$13",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:37.16-37.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$anyseq",
+            "ports": [
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$anyseq$1",
+                  "attributes": {
+                    "reg": "rst_tail",
+                    "src": "reset_synchronizer_formal.sv:3.22-3.30"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [5, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$reset_synchronizer_formal.sv:26$5",
+                  "attributes": {
+                    "src": "reset_synchronizer_formal.sv:26.25-26.44"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000101"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "reset_synchronizer_formal",
+            "top": "00000000000000000000000000000001",
+            "src": "reset_synchronizer_formal.sv:1.1-39.10"
+        }
+      }
+  ]
+}

@@ -1,0 +1,342 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: reset_synchronizer.sv
+Parsing formal SystemVerilog input from `reset_synchronizer.sv' to AST representation.
+Storing AST representation for module `$abstract\reset_synchronizer'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: reset_synchronizer_formal.sv
+Parsing formal SystemVerilog input from `reset_synchronizer_formal.sv' to AST representation.
+Storing AST representation for module `$abstract\reset_synchronizer_formal'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\reset_synchronizer_formal'.
+Generating RTLIL representation for module `\reset_synchronizer_formal'.
+
+3.2.1. Analyzing design hierarchy..
+Top module:  \reset_synchronizer_formal
+Parameter \STAGES = 2
+Parameter \ACTIVE_LOW = 1'1
+Parameter \ASYNC_ASSERT = 1'1
+
+3.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\reset_synchronizer'.
+Parameter \STAGES = 2
+Parameter \ACTIVE_LOW = 1'1
+Parameter \ASYNC_ASSERT = 1'1
+Generating RTLIL representation for module `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+
+3.2.3. Analyzing design hierarchy..
+Top module:  \reset_synchronizer_formal
+Used module:     $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+
+3.2.4. Analyzing design hierarchy..
+Top module:  \reset_synchronizer_formal
+Used module:     $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+Removing unused module `$abstract\reset_synchronizer_formal'.
+Removing unused module `$abstract\reset_synchronizer'.
+Removed 2 unused modules.
+Module reset_synchronizer_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3.3. Executing PROC pass (convert processes to netlists).
+
+3.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.$proc$reset_synchronizer.sv:16$18'.
+Removing empty process `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.$proc$reset_synchronizer.sv:16$18'.
+Cleaned up 1 empty switch.
+
+3.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$reset_synchronizer.sv:24$17 in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+Removed a total of 0 dead cases.
+
+3.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:21$14'.
+  Set init value: \formal_ticks = 5'00000
+
+3.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_asserted in `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.$proc$reset_synchronizer.sv:24$17'.
+
+3.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+3.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.$proc$reset_synchronizer.sv:24$17'.
+     1/1: $0\sync_q[1:0]
+Creating decoders for process `\reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:21$14'.
+Creating decoders for process `\reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:25$4'.
+     1/3: $assert$reset_synchronizer_formal.sv:34$11_EN
+     2/3: $assert$reset_synchronizer_formal.sv:30$9_EN
+     3/3: $assert$reset_synchronizer_formal.sv:29$7_EN
+
+3.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.\sync_q' using process `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.$proc$reset_synchronizer.sv:24$17'.
+  created $adff cell `$procdff$27' with positive edge clock and positive level reset.
+Creating register for signal `\reset_synchronizer_formal.\formal_ticks' using process `\reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:25$4'.
+  created $ff cell `$procdff$28' with global clock.
+
+3.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.$proc$reset_synchronizer.sv:24$17'.
+Removing empty process `reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:21$14'.
+Found and cleaned up 2 empty switches in `\reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:25$4'.
+Removing empty process `reset_synchronizer_formal.$proc$reset_synchronizer_formal.sv:25$4'.
+Cleaned up 2 empty switches.
+
+3.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+<suppressed ~3 debug messages>
+Optimizing module reset_synchronizer_formal.
+<suppressed ~2 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+Optimizing module reset_synchronizer_formal.
+
+3.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+Finding unused cells or wires in module \reset_synchronizer_formal..
+Removed 2 unused cells and 17 unused wires.
+<suppressed ~5 debug messages>
+
+3.7. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer...
+Checking module reset_synchronizer_formal...
+Found and reported 0 problems.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+Optimizing module reset_synchronizer_formal.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Computing hashes of 2 cells of `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding duplicate cells in `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding identical cells in module `\reset_synchronizer_formal'.
+Computing hashes of 16 cells of `\reset_synchronizer_formal'.
+Finding duplicate cells in `\reset_synchronizer_formal'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \reset_synchronizer_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+  Optimizing cells in module \reset_synchronizer_formal.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Computing hashes of 2 cells of `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding duplicate cells in `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding identical cells in module `\reset_synchronizer_formal'.
+Computing hashes of 16 cells of `\reset_synchronizer_formal'.
+Finding duplicate cells in `\reset_synchronizer_formal'.
+Computing hashes of 15 cells of `\reset_synchronizer_formal'.
+Finding duplicate cells in `\reset_synchronizer_formal'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+Finding unused cells or wires in module \reset_synchronizer_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+Optimizing module reset_synchronizer_formal.
+
+3.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \reset_synchronizer_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+3.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+  Optimizing cells in module \reset_synchronizer_formal.
+Performed a total of 0 changes.
+
+3.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Computing hashes of 2 cells of `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding duplicate cells in `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding identical cells in module `\reset_synchronizer_formal'.
+Computing hashes of 15 cells of `\reset_synchronizer_formal'.
+Finding duplicate cells in `\reset_synchronizer_formal'.
+Removed a total of 0 cells.
+
+3.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+Finding unused cells or wires in module \reset_synchronizer_formal..
+
+3.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+Optimizing module reset_synchronizer_formal.
+
+3.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 5) from port B of cell reset_synchronizer_formal.$lt$reset_synchronizer_formal.sv:6$2 ($lt).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+Finding unused cells or wires in module \reset_synchronizer_formal..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer.
+Optimizing module reset_synchronizer_formal.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Computing hashes of 2 cells of `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding duplicate cells in `$paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer'.
+Finding identical cells in module `\reset_synchronizer_formal'.
+Computing hashes of 15 cells of `\reset_synchronizer_formal'.
+Finding duplicate cells in `\reset_synchronizer_formal'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer..
+Finding unused cells or wires in module \reset_synchronizer_formal..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        6 wire bits
+        5 public wires
+        6 public wire bits
+        4 ports
+        4 port bits
+        2 cells
+        1   $adff
+        1   $not
+
+=== reset_synchronizer_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+       21 wire bits
+        6 public wires
+       10 public wire bits
+       14 cells
+        1   $add
+        1   $anyseq
+        4   $check
+        1   $eq
+        1   $ff
+        2   $logic_not
+        1   $lt
+        3   $mux
+        1 submodules
+        1   $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       16 reset_synchronizer_formal
+        2 $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+
+        +----------Count including submodules.
+        | 
+       18 wires
+       27 wire bits
+       11 public wires
+       16 public wire bits
+        4 ports
+        4 port bits
+        - memories
+        - memory bits
+        - processes
+       16 cells
+        1   $add
+        1   $adff
+        1   $anyseq
+        4   $check
+        1   $eq
+        1   $ff
+        2   $logic_not
+        1   $lt
+        3   $mux
+        1   $not
+        1 submodules
+        1   $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer...
+Checking module reset_synchronizer_formal...
+Found and reported 0 problems.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `reset_synchronizer_formal'. Setting top module to reset_synchronizer_formal.
+
+4.1. Analyzing design hierarchy..
+Top module:  \reset_synchronizer_formal
+Used module:     $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+
+4.2. Analyzing design hierarchy..
+Top module:  \reset_synchronizer_formal
+Used module:     $paramod$55135e7151185edcc8d80f31efbb9cc8c3ecc2f7\reset_synchronizer
+Removed 0 unused modules.
+Module reset_synchronizer_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing jny backend.
+
+6. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 046990e26f
+Yosys 0.63+188 (git sha1 cede13a74-dirty, x86_64-w64-mingw32-g++ 13.2.1 -O3)
+Time spent: 3% 6x opt_expr (0 sec), 3% 5x opt_clean (0 sec), ...
