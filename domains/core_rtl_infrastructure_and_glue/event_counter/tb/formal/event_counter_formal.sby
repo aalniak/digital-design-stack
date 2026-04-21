@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal event_counter.sv event_counter_formal.sv
+prep -top event_counter_formal
+
+[files]
+../../rtl/event_counter.sv
+event_counter_formal.sv
