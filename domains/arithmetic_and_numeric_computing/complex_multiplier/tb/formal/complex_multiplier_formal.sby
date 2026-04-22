@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal complex_multiplier.sv complex_multiplier_formal.sv
+prep -top complex_multiplier_formal
+
+[files]
+..\..\rtl\complex_multiplier.sv
+complex_multiplier_formal.sv
