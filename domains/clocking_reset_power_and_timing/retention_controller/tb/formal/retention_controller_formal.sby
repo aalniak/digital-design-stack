@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 20
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal retention_controller.sv retention_controller_formal.sv
+prep -top retention_controller_formal
+
+[files]
+../../rtl/retention_controller.sv
+retention_controller_formal.sv
