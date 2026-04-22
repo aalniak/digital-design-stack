@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal saturating_adder.sv saturating_adder_formal.sv
+prep -top saturating_adder_formal
+
+[files]
+..\..\rtl\saturating_adder.sv
+saturating_adder_formal.sv
