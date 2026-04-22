@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal multiplier.sv multiplier_formal.sv
+prep -top multiplier_formal
+
+[files]
+..\..\rtl\multiplier.sv
+multiplier_formal.sv

@@ -89,6 +89,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 42. `popcount_unit`
    - verification: simulation, synthesis sanity, formal
+43. `multiplier`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -106,9 +108,8 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `multiplier`
-2. `complex_multiplier`
-3. `divider`
+1. `complex_multiplier`
+2. `divider`
 
 ## Current Guidance
 
