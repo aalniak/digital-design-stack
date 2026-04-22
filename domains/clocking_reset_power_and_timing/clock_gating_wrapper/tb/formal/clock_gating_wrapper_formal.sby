@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal clock_gating_wrapper.sv clock_gating_wrapper_formal.sv
+prep -top clock_gating_wrapper_formal
+
+[files]
+../../rtl/clock_gating_wrapper.sv
+clock_gating_wrapper_formal.sv
