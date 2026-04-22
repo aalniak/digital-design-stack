@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal pps_capture.sv pps_capture_formal.sv
+prep -top pps_capture_formal
+
+[files]
+../../rtl/pps_capture.sv
+pps_capture_formal.sv
