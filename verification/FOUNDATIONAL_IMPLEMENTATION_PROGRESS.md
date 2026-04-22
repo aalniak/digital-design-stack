@@ -47,6 +47,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 21. `clock_divider`
    - verification: simulation, synthesis sanity, formal
+22. `clock_enable_generator`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -64,9 +66,9 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `clock_enable_generator`
-2. `clock_fail_detector`
-3. `clock_gating_wrapper`
+1. `clock_fail_detector`
+2. `clock_gating_wrapper`
+3. `clock_mux_controller`
 
 ## Current Guidance
 

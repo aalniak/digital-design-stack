@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal clock_enable_generator.sv clock_enable_generator_formal.sv
+prep -top clock_enable_generator_formal
+
+[files]
+../../rtl/clock_enable_generator.sv
+clock_enable_generator_formal.sv
