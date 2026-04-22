@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal barrel_shifter.sv barrel_shifter_formal.sv
+prep -top barrel_shifter_formal
+
+[files]
+..\..\rtl\barrel_shifter.sv
+barrel_shifter_formal.sv
