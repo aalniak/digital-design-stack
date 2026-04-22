@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal frequency_meter.sv frequency_meter_formal.sv
+prep -top frequency_meter_formal
+
+[files]
+../../rtl/frequency_meter.sv
+frequency_meter_formal.sv
