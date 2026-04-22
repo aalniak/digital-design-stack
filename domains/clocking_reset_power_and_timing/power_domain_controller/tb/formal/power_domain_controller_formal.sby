@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 24
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal power_domain_controller.sv power_domain_controller_formal.sv
+prep -top power_domain_controller_formal
+
+[files]
+../../rtl/power_domain_controller.sv
+power_domain_controller_formal.sv

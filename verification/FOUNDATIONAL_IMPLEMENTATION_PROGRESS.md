@@ -65,6 +65,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 30. `reset_sequencer`
    - verification: simulation, synthesis sanity, formal
+31. `power_domain_controller`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -82,9 +84,9 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `glitchless_clock_switch`
-2. `power_domain_controller`
-3. `retention_controller`
+1. `retention_controller`
+2. `rtc_block`
+3. `timestamp_counter`
 4. `wakeup_controller`
 
 ## Current Guidance
