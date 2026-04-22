@@ -73,6 +73,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 34. `timestamp_counter`
    - verification: simulation, synthesis sanity, formal
+35. `rtc_block`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -90,7 +92,7 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `rtc_block`
+1. `core clocking_reset_power_and_timing domain complete`
 
 ## Current Guidance
 
