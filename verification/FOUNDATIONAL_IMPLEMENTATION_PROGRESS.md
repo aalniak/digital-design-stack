@@ -43,6 +43,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 19. `packetizer`
    - verification: simulation, synthesis sanity, formal
+20. `depacketizer`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -60,9 +62,9 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `depacketizer`
-2. `clock_divider`
-3. `clock_enable_generator`
+1. `clock_divider`
+2. `clock_enable_generator`
+3. `clock_fail_detector`
 
 ## Current Guidance
 

@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal depacketizer.sv depacketizer_formal.sv
+prep -top depacketizer_formal
+
+[files]
+../../rtl/depacketizer.sv
+depacketizer_formal.sv
