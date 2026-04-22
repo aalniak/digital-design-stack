@@ -85,6 +85,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 40. `barrel_shifter`
    - verification: simulation, synthesis sanity, formal
+41. `leading_zero_counter`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -102,9 +104,10 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `leading_zero_counter`
-2. `popcount_unit`
-3. `multiplier`
+1. `popcount_unit`
+2. `multiplier`
+3. `complex_multiplier`
+4. `divider`
 
 ## Current Guidance
 

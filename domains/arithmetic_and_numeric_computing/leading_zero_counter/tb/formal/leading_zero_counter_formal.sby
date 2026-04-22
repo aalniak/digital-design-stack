@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal leading_zero_counter.sv leading_zero_counter_formal.sv
+prep -top leading_zero_counter_formal
+
+[files]
+..\..\rtl\leading_zero_counter.sv
+leading_zero_counter_formal.sv
