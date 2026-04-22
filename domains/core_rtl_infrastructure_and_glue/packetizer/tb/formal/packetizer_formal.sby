@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal packetizer.sv packetizer_formal.sv
+prep -top packetizer_formal
+
+[files]
+../../rtl/packetizer.sv
+packetizer_formal.sv
