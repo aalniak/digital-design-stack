@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal comparator_tree.sv comparator_tree_formal.sv
+prep -top comparator_tree_formal
+
+[files]
+..\..\rtl\comparator_tree.sv
+comparator_tree_formal.sv
