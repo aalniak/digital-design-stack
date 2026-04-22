@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal clock_divider.sv clock_divider_formal.sv
+prep -top clock_divider_formal
+
+[files]
+../../rtl/clock_divider.sv
+clock_divider_formal.sv
