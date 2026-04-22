@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 20
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal wakeup_controller.sv wakeup_controller_formal.sv
+prep -top wakeup_controller_formal
+
+[files]
+../../rtl/wakeup_controller.sv
+wakeup_controller_formal.sv
