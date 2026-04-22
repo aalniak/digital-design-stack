@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal popcount_unit.sv popcount_unit_formal.sv
+prep -top popcount_unit_formal
+
+[files]
+..\..\rtl\popcount_unit.sv
+popcount_unit_formal.sv
