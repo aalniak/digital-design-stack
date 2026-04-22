@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal clock_fail_detector.sv clock_fail_detector_formal.sv
+prep -top clock_fail_detector_formal
+
+[files]
+../../rtl/clock_fail_detector.sv
+clock_fail_detector_formal.sv
