@@ -57,6 +57,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 26. `frequency_meter`
    - verification: simulation, synthesis sanity, formal
+27. `glitchless_clock_switch`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -77,6 +79,7 @@ The next strongest low-risk foundational modules are:
 1. `glitchless_clock_switch`
 2. `pll_lock_monitor`
 3. `pps_capture`
+4. `reset_sequencer`
 
 ## Current Guidance
 

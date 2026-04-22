@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 40
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal glitchless_clock_switch.sv glitchless_clock_switch_formal.sv
+prep -top glitchless_clock_switch_formal
+
+[files]
+../../rtl/glitchless_clock_switch.sv
+glitchless_clock_switch_formal.sv
