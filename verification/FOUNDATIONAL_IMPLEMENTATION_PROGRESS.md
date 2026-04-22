@@ -38,6 +38,8 @@ The following foundational modules currently have implemented RTL, executable ve
 16. `width_converter`
    - verification: simulation, synthesis sanity, formal
 17. `stream_mux`
+    - verification: simulation, synthesis sanity, formal
+18. `gearbox`
    - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
@@ -56,9 +58,9 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `gearbox`
-2. `packetizer`
-3. `depacketizer`
+1. `packetizer`
+2. `depacketizer`
+3. `clock_divider`
 
 ## Current Guidance
 

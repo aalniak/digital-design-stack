@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal gearbox.sv gearbox_formal.sv
+prep -top gearbox_formal
+
+[files]
+../../rtl/gearbox.sv
+gearbox_formal.sv
