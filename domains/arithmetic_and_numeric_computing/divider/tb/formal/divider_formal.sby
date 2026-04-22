@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal divider.sv divider_formal.sv
+prep -top divider_formal
+
+[files]
+..\..\rtl\divider.sv
+divider_formal.sv
