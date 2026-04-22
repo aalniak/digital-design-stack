@@ -75,6 +75,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 35. `rtc_block`
    - verification: simulation, synthesis sanity, formal
+36. `adder_subtractor`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -92,7 +94,10 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `core clocking_reset_power_and_timing domain complete`
+1. `saturating_adder`
+2. `comparator_tree`
+3. `abs_min_max`
+4. `barrel_shifter`
 
 ## Current Guidance
 

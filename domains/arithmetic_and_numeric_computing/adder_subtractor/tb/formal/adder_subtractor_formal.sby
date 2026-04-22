@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal adder_subtractor.sv adder_subtractor_formal.sv
+prep -top adder_subtractor_formal
+
+[files]
+../../rtl/adder_subtractor.sv
+adder_subtractor_formal.sv
