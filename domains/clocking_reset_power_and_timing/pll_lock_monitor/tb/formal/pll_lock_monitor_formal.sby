@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal pll_lock_monitor.sv pll_lock_monitor_formal.sv
+prep -top pll_lock_monitor_formal
+
+[files]
+../../rtl/pll_lock_monitor.sv
+pll_lock_monitor_formal.sv
