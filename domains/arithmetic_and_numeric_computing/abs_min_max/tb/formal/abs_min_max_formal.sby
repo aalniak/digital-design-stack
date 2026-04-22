@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal abs_min_max.sv abs_min_max_formal.sv
+prep -top abs_min_max_formal
+
+[files]
+..\..\rtl\abs_min_max.sv
+abs_min_max_formal.sv

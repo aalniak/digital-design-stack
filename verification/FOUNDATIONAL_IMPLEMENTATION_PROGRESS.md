@@ -81,6 +81,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 38. `comparator_tree`
    - verification: simulation, synthesis sanity, formal
+39. `abs_min_max`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -98,8 +100,7 @@ Each implemented module now has:
 
 The next strongest low-risk foundational modules are:
 
-1. `abs_min_max`
-2. `barrel_shifter`
+1. `barrel_shifter`
 
 ## Current Guidance
 
