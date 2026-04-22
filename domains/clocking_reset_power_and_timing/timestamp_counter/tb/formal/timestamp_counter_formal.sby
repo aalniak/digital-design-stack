@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 20
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal timestamp_counter.sv timestamp_counter_formal.sv
+prep -top timestamp_counter_formal
+
+[files]
+../../rtl/timestamp_counter.sv
+timestamp_counter_formal.sv

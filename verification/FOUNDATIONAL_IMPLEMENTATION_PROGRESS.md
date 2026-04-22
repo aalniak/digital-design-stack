@@ -71,6 +71,8 @@ The following foundational modules currently have implemented RTL, executable ve
    - verification: simulation, synthesis sanity, formal
 33. `retention_controller`
    - verification: simulation, synthesis sanity, formal
+34. `timestamp_counter`
+   - verification: simulation, synthesis sanity, formal
 
 ## Current Pattern That Is Working
 
@@ -89,7 +91,6 @@ Each implemented module now has:
 The next strongest low-risk foundational modules are:
 
 1. `rtc_block`
-2. `timestamp_counter`
 
 ## Current Guidance
 
