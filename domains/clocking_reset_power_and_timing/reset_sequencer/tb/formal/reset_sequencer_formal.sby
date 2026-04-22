@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+multiclock on
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal reset_sequencer.sv reset_sequencer_formal.sv
+prep -top reset_sequencer_formal
+
+[files]
+../../rtl/reset_sequencer.sv
+reset_sequencer_formal.sv
