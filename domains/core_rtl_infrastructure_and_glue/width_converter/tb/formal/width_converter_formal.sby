@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal width_converter.sv width_converter_formal.sv
+prep -top width_converter_formal
+
+[files]
+../../rtl/width_converter.sv
+width_converter_formal.sv
