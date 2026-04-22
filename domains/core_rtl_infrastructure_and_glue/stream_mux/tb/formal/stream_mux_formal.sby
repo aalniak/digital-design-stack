@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal stream_mux.sv stream_mux_formal.sv
+prep -top stream_mux_formal
+
+[files]
+../../rtl/stream_mux.sv
+stream_mux_formal.sv
