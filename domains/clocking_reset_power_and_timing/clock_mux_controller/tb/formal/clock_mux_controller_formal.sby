@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 1
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal clock_mux_controller.sv clock_mux_controller_formal.sv
+prep -top clock_mux_controller_formal
+
+[files]
+../../rtl/clock_mux_controller.sv
+clock_mux_controller_formal.sv
